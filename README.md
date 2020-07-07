@@ -1,35 +1,78 @@
-# Unit 17 Nosql Homework: Workout Tracker
+# Workout Tracker
+[![GitHub License](https://img.shields.io/badge/License-orange.svg)](Develop/License/MIT.md)
+[![GitHub Test](https://img.shields.io/badge/Test-blue.svg)](#test)
 
-For this assignment, you'll create a workout tracker. 
-You have already been provided with the front end code in the `Develop` folder. 
-This assignment will require you to create Mongo database with a Mongoose schema and handle routes with Express.
 
-## User Story
+## Description 
 
-* As a user, I want to be able to view create and track daily workouts. 
-I want to be able to log multiple exercises in a workout on a given day. 
-I should also be able to track the name, type, weight, sets, reps, and duration of exercise. 
-If the exercise is a cardio exercise, I should be able to track my distance traveled.
+Workout Tracker is a full-stack application that allows the user to add and complete workouts or exercises. 
+Additionally, the user can check their workout dashboard to visualize graphics of their workout progress and data. 
 
-## Business Context
+This project enabled me to gain a better understadning of looking at pre-existing code and alalyzing where the connections
+need to be made in order for it to become a fully functioning application. I also gained a better understanding of MongoDB and mongoose. 
 
-A consumer will reach their fitness goals quicker when they track their workout progress.
 
-## Acceptance Criteria
 
-When the user loads the page, they should be given the option to create a new workout, or continue with their last workout.
+## Table of Contents
 
-The user should be able to:
+* [Description](#Description)
+* [Technologies](#technologies)
+* [Application](#Application)
+* [Demonstration](#demonstration)
+* [Installation](#installation)
+* [Test](#test)
+* [Acknowledgements](#acknowledgements)
+* [Questions](#questions)
 
-  * Add exercises to a previous workout plan.
+## Technologies
 
-  * Add new exercises to a new workout plan.
+* JavaScript
+* Bootstrap
+* Node.js
+* npm
+* HTML
+* CSS
+* MongoDB
+* Mmongoose
+* Express 
 
-  * View multiple the combined weight of multiple exercises on the `stats` page.
+## Application 
 
-## Hints
- * You are creating `server.js`, `api-routes.js`, `html-routes.js` and a mongoose model.
+![Finished Product](./Develop/public/assets/FitnessTracker.png)
+![Finished Product](./Develop/public/assets/dashboard.png)
 
- * Scan through the Javascript files in `public` to determine what api routes are needed.
 
- * We are not using Handlebars for this homework. There are 3 `html` files in the public. Which ones need aa route?
+## Demonstration 
+
+![Application Demo](./Develop/public/assets/video.gif)
+
+
+## Installation
+
+The following installations are needed for this package:
+1. npm init 
+2. npm i  
+3. npm install node
+    
+Once in the correct directory (server.js), run "node server.js"
+
+
+## Test
+
+* Tests coming soon
+
+
+## Acknowledgements
+
+* UW Coding Bootcamp instructional team and classmates
+    * test files already provided
+    * skeleton of html files already provided
+    * htmlRenderer.js already provided
+* [Bootstrap](https://getbootstrap.com/docs/4.1/getting-started/introduction/)
+
+
+## Questions 
+
+If you have any questions, please contact me on:
+GitHub at [avaarm](https://github.com/avaarm)
+Email at [Armenuhi](mailto:avaarm95@mail.com)

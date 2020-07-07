@@ -1,35 +1,57 @@
 const router = require("express").Router();
-const Transaction = require("../models/mongooseSchema.js");
+const mongoose = require("mongoose");
+const db = require("../models");
 
-router.post("/api/transaction", ({ body }, res) => {
-  Transaction.create(body)
-    .then(dbTransaction => {
-      res.json(dbTransaction);
-    })
-    .catch(err => {
-      res.status(400).json(err);
-    });
+mongoose.connect("mongodb://localhost/workout", {
+    useNewUrlParser: true,
+    useFindAndModify: false
 });
-
-router.post("/api/transaction/bulk", ({ body }, res) => {
-  Transaction.insertMany(body)
-    .then(dbTransaction => {
-      res.json(dbTransaction);
-    })
-    .catch(err => {
-      res.status(400).json(err);
-    });
+router.get("/api/workouts/range", (req, res) => {
+    db.Workout.find({})
+        .then(data => {
+            res.json(data);
+        })
+        .catch(err => {
+            res.json(err);
+        });
 });
-
-router.get("/api/transaction", (req, res) => {
-  Transaction.find({})
-    .sort({ date: -1 })
-    .then(dbTransaction => {
-      res.json(dbTransaction);
-    })
-    .catch(err => {
-      res.status(400).json(err);
-    });
+router.get("/api/workouts", (req, res) => {
+    db.Workout.find({})
+        .sort({ day: -1 })
+        .limit(1)
+        .then(data => {
+            res.json(data);
+        })
+        .catch(err => {
+            res.json(err);
+        });
 });
-
+router.post("/api/workouts", (req, res) => {
+    db.Workout.create(req.body)
+        .then(data => {
+            res.json(data);
+        })
+        .catch(err => {
+            res.json(err);
+        });
+});
+router.put("/api/workouts/:id", (req, res) => {
+    db.Workout.findOneAndUpdate(
+        { _id : req.params.id },
+        { $push: { exercises: req.body }},
+        { upsert: true, "new": true })
+        .then(data => {
+            let duration = data.calcDuration();
+            db.Workout.findOneAndUpdate(
+                { _id: req.params.id },
+                { $set: { totalDuration: duration } },
+            )
+            .then(updated => {
+                res.json(updated);
+            })
+        })
+        .catch(err => {
+            res.json(err);
+        });
+});
 module.exports = router;
