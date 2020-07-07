@@ -1,26 +1,19 @@
 {
-  "name": "workout-tracker",
+  "name": "mongoose_skeleton",
   "version": "1.0.0",
-  "description": "For this assignment, you'll create a workout tracker.  You have already been provided with the front end code in the `Develop` folder.  This assignment will require you to create Mongo database with a Mongoose schema and handle routes with Express.",
-  "main": "index.js",
+  "description": "",
+  "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/avaarm/Workout-Tracker.git"
+    "start": "node server.js",
+    "watch": "nodemon server.js",
+    "seed": "node seeders/seed.js"
   },
   "author": "",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/avaarm/Workout-Tracker/issues"
-  },
-  "homepage": "https://github.com/avaarm/Workout-Tracker#readme",
   "dependencies": {
-    "express": "^4.17.1",
-    "mongoose": "^5.9.22",
-    "morgan": "^1.10.0"
-  },
-  "devDependencies": {}
+    "express": "^4.16.3",
+    "mongoose": "^5.3.16",
+    "morgan": "^1.9.1"
+  }
 }

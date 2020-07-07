@@ -38,13 +38,13 @@ need to be made in order for it to become a fully functioning application. I als
 
 ## Application 
 
-![Finished Product](./Develop/public/assets/FitnessTracker.png)
-![Finished Product](./Develop/public/assets/dashboard.png)
+![Finished Product](./public/assets/FitnessTracker.png)
+![Finished Product](./public/assets/dashboard.png)
 
 
 ## Demonstration 
 
-![Application Demo](./Develop/public/assets/video.gif)
+![Application Demo](./public/assets/video.gif)
 
 
 ## Installation
