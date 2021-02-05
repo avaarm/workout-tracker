@@ -75,4 +75,4 @@ Once in the correct directory (server.js), run "node server.js"
 
 If you have any questions, please contact me on:
 GitHub at [avaarm](https://github.com/avaarm)
-Email at [Armenuhi](mailto:avaarm95@mail.com)
+Email at [Emma](mailto:emavanes95@mail.com)
