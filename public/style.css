@@ -33,6 +33,10 @@ a:visited {
   color: inherit;
 }
 
+.text-center{
+  text-align: center,
+}
+
 header {
   height: 150px;
   padding-top: 80px;
