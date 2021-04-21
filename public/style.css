@@ -16,10 +16,14 @@ h1 {
 }
 
 body {
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-family: 'Work Sans', sans-serif;
   color: #1e3d59;
   background-color: #f5f0e1;
 }
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Crimson Text', serif;
+ }
 
 nav {
   background-color: #ff6e40;
@@ -27,20 +31,27 @@ nav {
   height: 80px;
   padding: 10px;
   line-height: 3;
-  font-size: 1.2rem;
+  font-size: 1.6rem;
 }
+.nav-item {
+  float: right;
+  padding: 4px 10px 4px 10px;
+  text-transform: uppercase;
+  font-weight: 200;
 
+}
 a,
 a:hover,
 a:active,
 a:visited {
   text-decoration: none;
-  color: white;
+  color: #f5f0e1;
 }
 
 a.dashboard{
-  margin-left: 41%;
+  margin-left: 70%;
 }
+
 
 .text-center{
   text-align: center,
@@ -451,6 +462,24 @@ form > button {
 .resistance-form {
   padding: 10px;
 }
+
+@media screen and (max-width: 940px) {
+  a.dashboard{
+    margin-left: 40%;
+  }
+}
+@media screen and (max-width: 768px 478px 411px 414px 360px 375px 320px 280px 200px) {
+  a.dashboard{
+    margin-left: 30%;
+    font-size: .8rem;
+  }
+}
+@media screen and (max-width: 200px) {
+  a.dashboard{
+    margin-left: 5%;
+  }
+}
+
 
 @keyframes toast {
   50% {
